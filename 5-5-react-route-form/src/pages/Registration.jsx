@@ -84,7 +84,7 @@ export default function Registration() {
                           type="radio"
                           name="gender"
                           value="Female"
-                          checked={gender === "male"}
+                          checked={gender === "Female"}
                           onChange={(e) => setGender(e.target.value)}
                       /> Female
                   </label>
@@ -92,7 +92,10 @@ export default function Registration() {
               </fieldset>
 
               {/*Disable the submit button until all requirements met*/}
-              <button type="submit" className="btn">Register</button>
+              <button type="submit"
+                      className="btn"
+                      disabled={!email || !password || !gender}>Register
+              </button>
       </form>
 
         <div className="card info">
