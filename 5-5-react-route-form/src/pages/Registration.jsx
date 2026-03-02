@@ -36,21 +36,33 @@ export default function Registration() {
           {errors.email && (
             <p id="email-error" className="error">{errors.email}</p>
           )}
+            {/*Task2.1*/}
+            <div className="form-row">
+                <label htmlFor="password">Password</label>
+                <input
+                    id="password"
+                    type="password"
+                    value={password}
+                    onChange={(e) => setPassword(e.target.value)}
+                />
+            </div>
         </div>
+
+
         <div className="form-row">
            {/*password*/}
         </div>
 
-        <fieldset className="form-row">
-          {/*Radio Button for gender*/}
-        </fieldset>
+          <fieldset className="form-row">
+              {/*Radio Button for gender*/}
+          </fieldset>
 
           {/*Disable the submit button until all requirements met*/}
-        <button type="submit" className="btn">Register</button>
+          <button type="submit" className="btn">Register</button>
       </form>
 
-      <div className="card info">
-        <h3>Why Register?</h3>
+        <div className="card info">
+            <h3>Why Register?</h3>
         <ul className="list">
           <li>📘 Access course materials & assignments</li>
           <li>💬 Join the discussion forum</li>
