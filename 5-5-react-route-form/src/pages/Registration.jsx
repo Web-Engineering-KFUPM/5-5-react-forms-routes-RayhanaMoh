@@ -61,6 +61,9 @@ export default function Registration() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
             />
+            {errors.password && (
+                <p className="error">{errors.password}</p>
+            )}
         </div>
 
           <fieldset className="form-row">
