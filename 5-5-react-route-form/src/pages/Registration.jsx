@@ -2,8 +2,10 @@ import { useState } from "react";
 
 export default function Registration() {
   const [email, setEmail] = useState("");
-
   const [errors, setErrors] = useState({});
+  const [password, setPassword] = useState("");
+  const [gender, setGender] = useState("");
+
 
   const handleSubmit = (e) => {
     e.preventDefault();
