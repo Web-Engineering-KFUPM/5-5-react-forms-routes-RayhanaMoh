@@ -36,39 +36,56 @@ export default function Registration() {
           {errors.email && (
             <p id="email-error" className="error">{errors.email}</p>
           )}
-            {/*Task2.1*/}
-            <div className="form-row">
-                <label htmlFor="password">Password</label>
-                <input
-                    id="password"
-                    type="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
             </div>
-        </div>
-
 
         <div className="form-row">
            {/*password*/}
+            <label htmlFor="password">Password</label>
+            <input
+                id="password"
+                type="password"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+            />
         </div>
 
           <fieldset className="form-row">
               {/*Radio Button for gender*/}
-          </fieldset>
+                  <legend>Gender</legend>
+                  <label className="radio">
+                  <input
+                  type="radio"
+                  name="gender"
+                  value="male"
+                  checked={gender === "male"}
+                  onChange={(e) => setGender(e.target.value)}
+                  /> Male
+                  </label>
 
-          {/*Disable the submit button until all requirements met*/}
-          <button type="submit" className="btn">Register</button>
+                  <label className="radio">
+                      <input
+                          type="radio"
+                          name="gender"
+                          value="Female"
+                          checked={gender === "male"}
+                          onChange={(e) => setGender(e.target.value)}
+                      /> Female
+                  </label>
+
+              </fieldset>
+
+              {/*Disable the submit button until all requirements met*/}
+              <button type="submit" className="btn">Register</button>
       </form>
 
         <div className="card info">
             <h3>Why Register?</h3>
-        <ul className="list">
-          <li>📘 Access course materials & assignments</li>
-          <li>💬 Join the discussion forum</li>
-          <li>🎓 Track your progress & get certified</li>
-        </ul>
-      </div>
+            <ul className="list">
+                <li>📘 Access course materials & assignments</li>
+                <li>💬 Join the discussion forum</li>
+                <li>🎓 Track your progress & get certified</li>
+            </ul>
+        </div>
     </section>
-  );
+);
 }
