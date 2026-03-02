@@ -144,6 +144,10 @@
 // - Use the hints above to guide your implementation, but write the actual JSX and logic yourself.
 // ================================================================
 
+import { Routes, Route, NavLink } from "react-router-dom"
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Registration from "./pages/Registration";
 
 export default function App() {
   return (
@@ -152,11 +156,20 @@ export default function App() {
         <div className="brand">🧑‍💻 Student Portal</div>
         <div className="links">
           {/*Nav links*/}
+            <NavLink to="/" end className="navlink">Home Page</NavLink>
+            <NavLink to="/about" end className="navlink">About Page</NavLink>
+            <NavLink to="/registration" end className="navlink">Registration Page</NavLink>
         </div>
       </nav>
 
       <main className="container">
         {/*Routes*/}
+          <Routes>
+              <Route path="/" element={<Home />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/registration" element={<Registration />} />
+              <Route path="*" element={<h2>404 — Not Found</h2>} />
+          </Routes>
       </main>
 
       <footer className="footer">
