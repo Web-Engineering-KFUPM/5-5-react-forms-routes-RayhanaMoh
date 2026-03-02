@@ -25,7 +25,7 @@ export default function Registration() {
        setErrors(nextErrors);
        if (Object.keys(nextErrors).length > 0) return; // stop form submit if errors
 
-    alert(`Regiteration submit: ${email}`);
+      alert(`Regiteration submit: ${email}`);
   };
 
   return (
